@@ -1,14 +1,4 @@
-print ("")
-print ("  ______                                    _____   ______    ______   __        ______ ")
-print (" /      \                                  |     \ /      \  /      \ |  \      /      \ ")
-print ("|  $$$$$$\ _______    ______   _______      \$$$$$|  $$$$$$\|  $$$$$$\| $$   __|  $$$$$$\  ______ ")
-print ("| $$__| $$|       \  /      \ |       \       | $$| $$$\| $$| $$$\| $$| $$  /  \\$$__| $$ /      \ ")
-print ("| $$    $$| $$$$$$$\|  $$$$$$\| $$$$$$$\ __   | $$| $$$$\ $$| $$$$\ $$| $$_/  $$ |     $$|  $$$$$$\ ")
-print ("| $$$$$$$$| $$  | $$| $$  | $$| $$  | $$|  \  | $$| $$\$$\$$| $$\$$\$$| $$   $$ __\$$$$$\| $$   \$$ ")
-print ("| $$  | $$| $$  | $$| $$__/ $$| $$  | $$| $$__| $$| $$_\$$$$| $$_\$$$$| $$$$$$\|  \__| $$| $$ ")
-print ("| $$  | $$| $$  | $$ \$$    $$| $$  | $$ \$$    $$ \$$  \$$$ \$$  \$$$| $$  \$$\\$$    $$| $$ ")
-print (" \$$   \$$ \$$   \$$  \$$$$$$  \$$   \$$  \$$$$$$   \$$$$$$   \$$$$$$  \$$   \$$ \$$$$$$  \$$ ")
-print ("")
+print ("Welcome to IIT DEVELOPER This is created by IIT DEVELOPER Team ")
 from telethon.sync import TelegramClient
 from telethon.tl.functions.messages import GetDialogsRequest
 from telethon.tl.types import InputPeerEmpty, InputPeerChannel, InputPeerUser
@@ -39,7 +29,7 @@ if not client.is_user_authorized():
     client.sign_in(phone, input('40779'))
 
 users = []
-with open(r"Scrapped.csv", encoding='UTF-8') as f:  #Enter your file name
+with open(r"members.csv", encoding='UTF-8') as f:  #Enter your file name
     rows = csv.reader(f,delimiter=",",lineterminator="\n")
     next(rows, None)
     for row in rows:
