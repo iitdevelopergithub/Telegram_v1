@@ -91,7 +91,7 @@ n = 0
 for user in users:
     n += 1
     if n % 80 == 0:
-        sleep(40)
+        sleep(60)
     try:
         print("Adding {}".format(user['id']))
         if mode == 1:
