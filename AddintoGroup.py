@@ -1,12 +1,3 @@
-print(f"""
-{re}╦ ╦ ╔╦╗{cy}╔═╗ ┌─┐ ┬ ┬ ╔═╗ ║  ╔═╗ ┌─┐┌─┐┬─┐
-{re}║ ║  ║ {cy}║ ║ ├┤  │ │ ├┤  ║  ║ ║ ├─┘├┤ ├┬┘
-{re}╩ ╩  ╩ {cy}╚═╝ └─┘  ─  ╚═╝ ╚═ ╚═╝ ┴  └─┘┴└─
- 
-            version : 1.0
-     {re} IIT {cy} DEVELOPER 
-""")
-print ("Welcome to IIT DEVELOPER This is created by IIT DEVELOPER Team ")
 from telethon.sync import TelegramClient
 from telethon.tl.functions.messages import GetDialogsRequest
 from telethon.tl.types import InputPeerEmpty, InputPeerChannel, InputPeerUser
@@ -17,6 +8,22 @@ import csv
 import traceback
 import time
 import random
+import os, sys
+import configparser
+re="\033[1;31m"
+gr="\033[1;32m"
+cy="\033[1;36m"
+def banner():
+	os.system('clear')
+	print(f"""
+       	{re}╦ ╦ ╔╦╗{cy}╔═╗ ┌─┐ ┬ ┬ ╔═╗ ║  ╔═╗ ┌─┐┌─┐┬─┐
+        {re}║ ║  ║ {cy}║ ║ ├┤  │ │ ├┤  ║  ║ ║ ├─┘├┤ ├┬┘
+        {re}╩ ╩  ╩ {cy}╚═╝ └─┘  ─  ╚═╝ ╚═ ╚═╝ ┴  └─┘┴└─
+            version : 1.0
+     {re} welcome to  IIT {cy} DEVELOPER 
+	""")
+banner()
+print(gr+"[+] Welcome to IIT DEVELOPER This is created by IIT DEVELOPER Team")
 
 api_id = input("Enter Your Id: ")#1599918  #Enter Your 7 Digit Telegram API ID.
 api_hash = input("Enter Your Hash Key: ")#'741c483b128c763e5e26a54579329ebb'   #Enter Yor 32 Character API Hash
