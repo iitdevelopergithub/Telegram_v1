@@ -1,10 +1,11 @@
+print(f"""
 {re}╦ ╦ ╔╦╗{cy}╔═╗ ┌─┐ ┬ ┬ ╔═╗ ║  ╔═╗ ┌─┐┌─┐┬─┐
 {re}║ ║  ║ {cy}║ ║ ├┤  │ │ ├┤  ║  ║ ║ ├─┘├┤ ├┬┘
 {re}╩ ╩  ╩ {cy}╚═╝ └─┘  ─  ╚═╝ ╚═ ╚═╝ ┴  └─┘┴└─
  
             version : 1.0
      {re} IIT {cy} DEVELOPER 
-
+""")
 print ("Welcome to IIT DEVELOPER This is created by IIT DEVELOPER Team ")
 from telethon.sync import TelegramClient
 from telethon.tl.functions.messages import GetDialogsRequest
