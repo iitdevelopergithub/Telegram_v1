@@ -1,5 +1,5 @@
 #!/bin/env python3
-# code by : youtube.com/theunknon
+# code by :IIT DEVELOPER
 
 """
 you can re run setup.py 
@@ -13,6 +13,12 @@ cy="\033[1;36m"
 def banner():
 	os.system('clear')
 	print(f"""
+	{re} ╦ {re} ╦  {re}╔╦╗{cy}╔═╗   ┌─┐{re}┬ ┬ ╔═╗ ╔  {cy}╔═╗ ┌─┐┌─┐┬─┐
+        {re} ║ {re} ║  {re} ║ {cy}║ ║   ├┤ {re}│ │ ├┤  ║  {cy}║ ║ ├─┘├┤ ├┬┘
+        {re} ╩ {re} ╩  {re} ╩ {cy}╚═╝   └─┘{re} ─  ╚═╝ ╚═ {cy}╚═╝ ┴  └─┘┴└─
+ 
+            version : 1.0
+     {re} IIT {cy} DEVELOPER 
 	{re}╔═╗{cy}┌─┐┌┬┐┬ ┬┌─┐
 	{re}╚═╗{cy}├┤  │ │ │├─┘
 	{re}╚═╝{cy}└─┘ ┴ └─┘┴
@@ -37,4 +43,4 @@ setup.close()
 print(gr+"[+] setup complete !")
 print(gr+"[+] now you can run any tool !")
 print(gr+"[+] make sure to read docs 4 installation & api setup")
-print(gr+"[+] https://github.com/th3unkn0n/TeleGram-Scraper/blob/master/README.md")
+print(gr+"[+] https://github.com/iitdevelopergithub/Telegram-hack/edit/master/README.md")
