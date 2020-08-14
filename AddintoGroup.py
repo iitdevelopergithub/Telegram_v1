@@ -1,6 +1,6 @@
-{re} ╦ {re} ╦  {re}╔╦╗{cy}╔═╗   ┌─┐{re}┬ ┬ ╔═╗ ╔  {cy}╔═╗ ┌─┐┌─┐┬─┐
-{re} ║ {re} ║  {re} ║ {cy}║ ║   ├┤ {re}│ │ ├┤  ║  {cy}║ ║ ├─┘├┤ ├┬┘
-{re} ╩ {re} ╩  {re} ╩ {cy}╚═╝   └─┘{re} ─  ╚═╝ ╚═ {cy}╚═╝ ┴  └─┘┴└─
+{re}╦ ╦ ╔╦╗{cy}╔═╗ ┌─┐ ┬ ┬ ╔═╗ ║  ╔═╗ ┌─┐┌─┐┬─┐
+{re}║ ║  ║ {cy}║ ║ ├┤  │ │ ├┤  ║  ║ ║ ├─┘├┤ ├┬┘
+{re}╩ ╩  ╩ {cy}╚═╝ └─┘  ─  ╚═╝ ╚═ ╚═╝ ┴  └─┘┴└─
  
             version : 1.0
      {re} IIT {cy} DEVELOPER 
@@ -26,8 +26,8 @@ async def main():
     await client.send_message('me', 'Hello !!!!!')
 
 
-SLEEP_TIME_1 = 100
-SLEEP_TIME_2 = 100
+SLEEP_TIME_1 = 50
+SLEEP_TIME_2 = 50
 with client:
     client.loop.run_until_complete(main())
 client.connect()
@@ -36,7 +36,7 @@ if not client.is_user_authorized():
     client.sign_in(phone, input('40779'))
 
 users = []
-with open(r"members.csv", encoding='UTF-8') as f:  #Enter your file name
+with open(r"Scrapped.csv", encoding='UTF-8') as f:  #Enter your file name
     rows = csv.reader(f,delimiter=",",lineterminator="\n")
     next(rows, None)
     for row in rows:
@@ -78,15 +78,12 @@ g_index = input("Enter a Number: ")
 target_group = groups[int(g_index)]
 
 target_group_entity = InputPeerChannel(target_group.id, target_group.access_hash)
-
 mode = int(input("Enter 1 to add by username or 2 to add by ID: "))
-
 n = 0
-
 for user in users:
     n += 1
     if n % 80 == 0:
-        sleep(60)
+        sleep(40)
     try:
         print("Adding {}".format(user['id']))
         if mode == 1:
@@ -99,7 +96,7 @@ for user in users:
             sys.exit("Invalid Mode Selected. Please Try Again.")
         client(InviteToChannelRequest(target_group_entity, [user_to_add]))
         print("Waiting for 60-180 Seconds...")
-        time.sleep(random.randrange(0, 5))
+        time.sleep(random.randrange(0, 4))
     except PeerFloodError:
         print("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
         print("Waiting {} seconds".format(SLEEP_TIME_2))
@@ -107,7 +104,7 @@ for user in users:
     except UserPrivacyRestrictedError:
         print("The user's privacy settings do not allow you to do this. Skipping.")
         print("Waiting for 5 Seconds...")
-        time.sleep(random.randrange(0, 5))
+        time.sleep(random.randrange(0, 4))
     except:
         traceback.print_exc()
         print("Unexpected Error")
