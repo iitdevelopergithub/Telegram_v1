@@ -25,9 +25,9 @@ def banner():
 banner()
 print(gr+"[+] Welcome to IIT DEVELOPER This is created by IIT DEVELOPER Team")
 
-api_id = input("Enter Your Id: ")#1599918  #Enter Your 7 Digit Telegram API ID.
-api_hash = input("Enter Your Hash Key: ")#'741c483b128c763e5e26a54579329ebb'   #Enter Yor 32 Character API Hash
-phone = input("Enter Your Number: ")#'+919005552324'   #Enter Your Mobilr Number With Country Code.
+api_id = input("Enter Your Id: ")
+api_hash = input("Enter Your Hash Key: ")
+phone = input("Enter Your Number: ")#'+919005552324'  
 client = TelegramClient(phone, api_id, api_hash)
 async def main():
     # Now you can use all client methods listed below, like for example...
