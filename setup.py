@@ -26,7 +26,7 @@ def banner():
 banner()
 print(gr+"[+] Installing requierments ...")
 os.system('python -m pip install telethon')
-os.system('pip3 install telethon')
+os.system('pip install telethon')
 banner()
 os.system("touch config.data")
 cpass = configparser.RawConfigParser()
